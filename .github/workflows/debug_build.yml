@@ -7,7 +7,7 @@ on:
   pull_request:
     branches:
       - master
-
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -64,5 +64,3 @@ jobs:
             ${{ env.APK_DIR_PATH }}/${{ env.APK_BASENAME_PREFIX }}.apk
             ${{ env.APK_DIR_PATH }}/sha256sums
             ${{ env.APK_DIR_PATH }}/output-metadata.json
-on:
-  workflow_dispatch:
